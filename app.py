@@ -14,7 +14,6 @@ from urllib.parse import quote
 
 import time
 
-from google_images_search import GoogleImagesSearch
 import os
 
 from download import download_image

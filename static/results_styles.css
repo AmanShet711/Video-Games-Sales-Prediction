@@ -1,0 +1,40 @@
+h1{
+    text-align: center;
+    color: aliceblue;
+    font-size: 70px;
+    text-shadow: 2px 2px #000;
+    font-family: sans-serif;
+}
+h3{
+    text-align: center;
+    color: aliceblue;
+    font-size: 50px;
+    text-shadow: 2px 2px #000;
+    font-family: sans-serif;
+}
+p{
+    text-align: center;
+    color: aliceblue;
+    font-size: 30px;
+    text-shadow: 2px 2px #000;
+    font-family: sans-serif;
+}
+body{
+    background-color: #6e9de3;
+}
+
+img {
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); /* Shadow for a sense of depth */
+    margin-bottom: 20px; /* Provide some space below the image */
+    transition: transform 0.3s ease-in-out; /* Add a smooth transition effect */
+    display: block;
+    margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+  
+  /* Apply scaling on hover to enhance the 3D-like effect */
+  img:hover {
+    transform: scale(1.05); /* Increase size on hover for a pop-out effect */
+}

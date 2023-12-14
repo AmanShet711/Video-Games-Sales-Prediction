@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sales Prediction Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='results_styles.css') }}">
+</head>
+<body>
+    <h1>Sales Prediction Results</h1>
+    <h3>Predicted Global Sales: {{ prediction }}</h3>
+    <p>Game near to prediction: {{ closest_game_name }}</p>
+    <div>
+        {% if image_url %}
+        <img src="{{ image_url }}" alt="Predicted Game">
+
+        {% else %}
+            <img src="{{ url_for('static', filename='images/saitama.jpeg') }}" alt="Default Image">
+        {% endif %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dataset Insights</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='insights_styles.css') }}">
+</head>
+<body>
+    <h1>Dataset Insights</h1>
+
+    <h2>Top 10 Genres by Global Sales</h2>
+    <ul>
+        {% for genre, sales in genre_sales.items() %}
+            <li>{{ genre }}: {{ sales }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Top 10 Platforms by Global Sales</h2>
+    <ul>
+        {% for platform, sales in platform_sales.items() %}
+            <li>{{ platform }}: {{ sales }}</li>
+        {% endfor %}
+    </ul>
+
+    <!-- Display the pie chart -->
+    <h2>Top 10 Genres of Games Sold (Pie Chart)</h2>
+    <img src="data:image/png;base64,{{ plot_data }}" alt="Top 10 Genres of Games Sold">
+
+    <!-- Display the correlation heatmap -->
+    <h2>Correlation Heatmap</h2>
+    <img src="data:image/png;base64,{{ heatmap_data }}" alt="Correlation Heatmap">
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Predict Sales</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='predict_styles.css') }}">
+</head>
+<body class="body">
+    <h1>Predict Game Sales</h1>
+    <form class="form" method="post" action="/predict">
+        <label for="Rank">Rank:</label>
+        <input type="number" step="any" name="Rank" required><br><br>
+        <label for="NA_Sales">NA Sales:</label>
+        <input type="number" step="any" name="NA_Sales" required><br><br>
+        <label for="EU_Sales">EU Sales:</label>
+        <input type="number" step="any" name="EU_Sales" required><br><br>
+        <label for="JP_Sales">JP Sales:</label>
+        <input type="number" step="any" name="JP_Sales" required><br><br>
+        <label for="Other_Sales">Other Sales:</label>
+        <input type="number" step="any" name="Other_Sales" required><br><br>
+        <input type="submit" class="submit" value="Predict">
+    </form>
+    {% if prediction %}
+        <p>Predicted Global Sales: {{ prediction }}</p>
+    {% endif %}
+</body>
+</html>

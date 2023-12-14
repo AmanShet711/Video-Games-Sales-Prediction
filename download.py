@@ -10,7 +10,7 @@ your_dataset_titles = data['Name']
 
 # Function to download image for a single game title
 def download_image(game_title):
-    gis = GoogleImagesSearch('AIzaSyC9xSUIwNxbaOfJYlHI6tNjLWav4Uo0dmE', '74ba666ec5a6047d3')
+    gis = GoogleImagesSearch('YOUR API KEY', 'CX VALUE')
 
     # Search for the game title
     _search_params = {
